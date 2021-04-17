@@ -6,25 +6,25 @@ export class Assistance {
     @Generated("uuid")
     id: number;
 
-    @Column()
+    @Column({ comment: "data de inicio" })
     actualstart: Date;
 
-    @Column()
+    @Column({ comment: "data de termino" })
     actualend: Date;
 
-    @Column()
+    @Column({ comment: "assunto" })
     subject: string;
 
-    @Column()
+    @Column({ comment: "tipo de atividade" })
     pjo_tipodeatividade: string; // talvez um enum
 
-    @Column()
+    @Column({ comment: "empreendimento" })
     pjo_empreendimentoid: string; // talvez um guid
 
-    @Column()
+    @Column({ comment: "bloco" })
     pjo_blocoid: string; // talvez um guid
 
-    @Column()
+    @Column({ comment: "unidade" })
     pjo_unidadeid: string; // talvez um guid
 
 }
