@@ -1,0 +1,27 @@
+{
+   "name": "pokedevs-api",
+   "version": "0.0.1",
+   "description": "...",
+   "devDependencies": {
+      "@types/body-parser": "^1.19.0",
+      "@types/express": "^4.17.11",
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "body-parser": "^1.18.1",
+      "express": "^4.15.4",
+      "pg": "^8.4.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.32"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "typeorm:migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n",
+      "typeorm:entity:create": "ts-node ./node_modules/typeorm/cli.js entity:create -n",
+      "typeorm:migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+      "typeorm:migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+      "typeorm:migration:show": "ts-node ./node_modules/typeorm/cli.js migration:show"
+   }
+}
