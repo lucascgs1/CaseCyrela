@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "c956b108-7203-40b0-aebb-5310ffe692af",
+		"name": "CaseCyrela.Api",
+		"description": "# Introdução\nApi Criada para o caso cyrela, visando principalmente gerenciar conflitos de forma rapida\n\n# Visão geral\nApi feita com node.js e banco de dados postgree utilizando docker\n\n# Codigos de erro\nError: connect ECONNREFUSED\né necessaria ter o docker instalado e rodando para iniciar o aplicativo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assistance",
+			"item": [
+				{
+					"name": "Get All Assistance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/assistance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assistance"
+							]
+						},
+						"description": "Obtem os atendimentos"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/assistance",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"assistance"
+									]
+								},
+								"description": "Obtem os atendimentos"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get Assistance By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/assistance/:ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assistance",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "ID66"
+								}
+							]
+						},
+						"description": "Obtem os dados de um atendimento em especifico"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/assistance/:ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"assistance",
+										":ID"
+									],
+									"variable": [
+										{
+											"key": "ID",
+											"value": "ID66"
+										}
+									]
+								},
+								"description": "Obtem os dados de um atendimento em especifico"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create Assistance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"actualstart\": \"2020-12-01\",\r\n  \"actualend\": \"2020-12-05\",\r\n  \"subject\": \"Auxilio\",\r\n  \"pjo_tipodeatividade\": \"Contas\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_blocoid\": 2,\r\n  \"pjo_unidadeid\": 5\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/assistance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assistance"
+							]
+						},
+						"description": "Salva os dados do atendimento\n\n```json\n{\n    \"actualstart\": \"2020-12-01\",\n    \"actualend\": \"2020-12-05\",\n    \"subject\": \"Auxilio\",\n    \"pjo_tipodeatividade\": \"Contas\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_blocoid\": 2,\n    \"pjo_unidadeid\": 5\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"actualstart\": \"2020-12-01\",\r\n  \"actualend\": \"2020-12-05\",\r\n  \"subject\": \"Auxilio\",\r\n  \"pjo_tipodeatividade\": \"Contas\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_blocoid\": 2,\r\n  \"pjo_unidadeid\": 5\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/assistance",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"assistance"
+									]
+								},
+								"description": "Salva os dados do atendimento\n\n```json\n{\n    \"actualstart\": \"2020-12-01\",\n    \"actualend\": \"2020-12-05\",\n    \"subject\": \"Auxilio\",\n    \"pjo_tipodeatividade\": \"Contas\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_blocoid\": 2,\n    \"pjo_unidadeid\": 5\n}\n```"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update Assistance",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"actualstart\": \"2020-12-01\",\r\n  \"actualend\": \"2020-12-05\",\r\n  \"subject\": \"Auxilio\",\r\n  \"pjo_tipodeatividade\": \"Contas\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_blocoid\": 2,\r\n  \"pjo_unidadeid\": 5\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/assistance/:ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assistance",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "ID66"
+								}
+							]
+						},
+						"description": "Atualiza os dados de um atendimento em especifico.\n\n```\n{\n    \"actualstart\": \"2020-12-01\",\n    \"actualend\": \"2020-12-05\",\n    \"subject\": \"Auxilio\",\n    \"pjo_tipodeatividade\": \"Contas\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_blocoid\": 2,\n    \"pjo_unidadeid\": 5\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"actualstart\": \"2020-12-01\",\r\n  \"actualend\": \"2020-12-05\",\r\n  \"subject\": \"Auxilio\",\r\n  \"pjo_tipodeatividade\": \"Contas\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_blocoid\": 2,\r\n  \"pjo_unidadeid\": 5\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/assistance/:ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"assistance",
+										":ID"
+									],
+									"variable": [
+										{
+											"key": "ID",
+											"value": "ID66"
+										}
+									]
+								},
+								"description": "Atualiza os dados de um atendimento em especifico.\n\n```\n{\n    \"actualstart\": \"2020-12-01\",\n    \"actualend\": \"2020-12-05\",\n    \"subject\": \"Auxilio\",\n    \"pjo_tipodeatividade\": \"Contas\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_blocoid\": 2,\n    \"pjo_unidadeid\": 5\n}\n```"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete Assistance",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/assistance/:ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assistance",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "ID35"
+								}
+							]
+						},
+						"description": "Deleta um atendimento"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/assistance/:ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"assistance",
+										":ID"
+									],
+									"variable": [
+										{
+											"key": "ID",
+											"value": "ID35"
+										}
+									]
+								},
+								"description": "Deleta um atendimento"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"description": "WebService responsável pelas Requisições de assistência"
+		},
+		{
+			"name": "Ocorrence",
+			"item": [
+				{
+					"name": "Get All Ocorrence",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/ocorrence",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ocorrence"
+							]
+						},
+						"description": "Obtem todas as ocorrencias"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/ocorrence",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ocorrence"
+									]
+								},
+								"description": "Obtem todas as ocorrencias"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get Ocorrence By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/ocorrence/:ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ocorrence",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "ID35"
+								}
+							]
+						},
+						"description": "Obtem os dados de uma ocorrencia"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/ocorrence/:ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ocorrence",
+										":ID"
+									],
+									"variable": [
+										{
+											"key": "ID",
+											"value": "ID35"
+										}
+									]
+								},
+								"description": "Obtem os dados de uma ocorrencia"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create Ocorrence",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ticketnumber\": 2,\r\n  \"pjo_clientedaunidade\": \"João\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_bloco\": 3,\r\n  \"pjo_unidade\": 4,\r\n  \"pjo_bandeira\": \"Amarela\",\r\n  \"description\": \"Chave\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/ocorrence",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ocorrence"
+							]
+						},
+						"description": "Salva os dados de uma ocorrencia\n\n```\n{\n    \"ticketnumber\": 2,\n    \"pjo_clientedaunidade\": \"João\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_bloco\": 3,\n    \"pjo_unidade\": 4,\n    \"pjo_bandeira\": \"Amarela\",\n    \"description\": \"Chave\"\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ticketnumber\": 2,\r\n  \"pjo_clientedaunidade\": \"João\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_bloco\": 3,\r\n  \"pjo_unidade\": 4,\r\n  \"pjo_bandeira\": \"Amarela\",\r\n  \"description\": \"Chave\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/ocorrence",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ocorrence"
+									]
+								},
+								"description": "Salva os dados de uma ocorrencia\n\n```\n{\n    \"ticketnumber\": 2,\n    \"pjo_clientedaunidade\": \"João\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_bloco\": 3,\n    \"pjo_unidade\": 4,\n    \"pjo_bandeira\": \"Amarela\",\n    \"description\": \"Chave\"\n}\n```"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update Ocorrence",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ticketnumber\": 2,\r\n  \"pjo_clientedaunidade\": \"João\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_bloco\": 3,\r\n  \"pjo_unidade\": 4,\r\n  \"pjo_bandeira\": \"Amarela\",\r\n  \"description\": \"Chave\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/ocorrence/:ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ocorrence",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "ID35"
+								}
+							]
+						},
+						"description": "Atualiza os dados de uma ocorrencia\n\n```\n{\n    \"ticketnumber\": 2,\n    \"pjo_clientedaunidade\": \"João\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_bloco\": 3,\n    \"pjo_unidade\": 4,\n    \"pjo_bandeira\": \"Amarela\",\n    \"description\": \"Chave\"\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ticketnumber\": 2,\r\n  \"pjo_clientedaunidade\": \"João\",\r\n  \"pjo_empreendimentoid\": 1,\r\n  \"pjo_bloco\": 3,\r\n  \"pjo_unidade\": 4,\r\n  \"pjo_bandeira\": \"Amarela\",\r\n  \"description\": \"Chave\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/ocorrence/:ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ocorrence",
+										":ID"
+									],
+									"variable": [
+										{
+											"key": "ID",
+											"value": "ID35"
+										}
+									]
+								},
+								"description": "Atualiza os dados de uma ocorrencia\n\n```\n{\n    \"ticketnumber\": 2,\n    \"pjo_clientedaunidade\": \"João\",\n    \"pjo_empreendimentoid\": 1,\n    \"pjo_bloco\": 3,\n    \"pjo_unidade\": 4,\n    \"pjo_bandeira\": \"Amarela\",\n    \"description\": \"Chave\"\n}\n```"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete Ocorrence",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/ocorrence/:ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ocorrence",
+								":ID"
+							],
+							"variable": [
+								{
+									"key": "ID",
+									"value": "ID35"
+								}
+							]
+						},
+						"description": "Deleta uma ocorrencia"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/ocorrence/:ID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ocorrence",
+										":ID"
+									],
+									"variable": [
+										{
+											"key": "ID",
+											"value": "ID35"
+										}
+									]
+								},
+								"description": "Deleta uma ocorrencia"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	]
+}
