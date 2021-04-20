@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "8dbd2540-3f88-425f-a342-ea2e36cd0228",
+		"name": "CyrelaApi",
+		"description": "# Introdução\nApi Criada para o caso cyrela, visando principalmente gerenciar conflitos de forma rapida\n\n# Visão geral\nApi feita com node.js e banco de dados postgree utilizando docker\n\n# Codigos de erro\nError: connect ECONNREFUSED\né necessaria ter o docker instalado e rodando para iniciar o aplicativo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/assistance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/assistance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assistance"
+					]
+				},
+				"description": "Obtem os atendimentos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/assistance/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/assistance/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assistance",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Obtem os dados de um atendimento em especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/assistance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/assistance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assistance"
+					]
+				},
+				"description": "Salva os dados do atendimento"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/assistance/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/assistance/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assistance",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Deleta um atendimento"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ocorrence",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/ocorrence",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ocorrence"
+					]
+				},
+				"description": "Obtem todas as ocorrencias"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ocorrence/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/ocorrence/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ocorrence",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Obtem os dados de uma ocorrencia"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ocorrence",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/ocorrence",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ocorrence"
+					]
+				},
+				"description": "Salva os dados de uma ocorrencia"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ocorrence/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/ocorrence/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ocorrence",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Deleta uma ocorrencia"
+			},
+			"response": []
+		}
+	]
+}

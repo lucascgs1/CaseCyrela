@@ -35,9 +35,11 @@ Feito isso vamos para a configuração do banco de dados, abra o arquivo `ormcon
 Opcionalmente você pode estar pulando essa parte e usando as credênciais já inseridas no arquivo.
 
 
-### Docker (Opcional)
+### Docker
 
-Caso precise de um banco de dados para testar o aplicativo, recomendados o uso do docker, para isso iremos utilizar o comando:
+Caso nao utilize um banco local, sera necessario subir um docker para utilizar o postgree como banco de dados local.
+
+Para isso é necessario que o docker esteja instalado e o wdsl instalado e atualizado, logo apos execute o comando abaixo:
 
 ```bash
 docker-compose up -d
@@ -67,7 +69,7 @@ Done in 10.98s.
 
 ### Dump data
 
-Como acabamos de criar nosso banco de dados, podemos então criar alguns dados dentro dele com os seguintes comandos:
+Como acabamos de criar nosso banco de dados, Conectar no banco de dados, com as credenciais que se encontram no ormconfig.json e executar os seguintes comandos para popular as tabelas:
 
 ```sql
 INSERT INTO assistance(actualstart, actualend, subject, pjo_tipodeatividade, pjo_empreendimentoid, pjo_blocoid, pjo_unidadeid)
