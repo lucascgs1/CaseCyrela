@@ -17,6 +17,11 @@ export const Routes = [
         route: "/assistance",
         controller: AssistanceController,
         action: "save"
+    },{
+        method: "put",
+        route: "/assistance",
+        controller: AssistanceController,
+        action: "update"
     }, {
         method: "delete",
         route: "/assistance/:id",
@@ -33,6 +38,11 @@ export const Routes = [
         route: "/ocorrence/:id",
         controller: OccurrenceController,
         action: "one"
+    },{
+        method: "put",
+        route: "/ocorrence",
+        controller: OccurrenceController,
+        action: "update"
     }, {
         method: "post",
         route: "/ocorrence",
